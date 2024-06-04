@@ -102,7 +102,7 @@ class Weather extends React.Component {
       navigator.geolocation.getCurrentPosition(resolve, reject, options);
     });
   };
-
+  
   getWeather = async (lat, lon) => {
     const api_call = await fetch(
       `${apiKeys.base}weather?lat=${lat}&lon=${lon}&units=metric&APPID=${apiKeys.key}`
@@ -185,6 +185,8 @@ class Weather extends React.Component {
                 <p>
                   {this.state.temperatureC}°<span>C</span>
                 </p>
+                {/* <span className="slash">/</span>
+                {this.state.temperatureF} &deg;F */}
               </div>
             </div>
           </div>
